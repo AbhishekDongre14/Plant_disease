@@ -10,18 +10,18 @@ import boto3
 import tempfile
 from dotenv import load_dotenv
 
-# 🔐 Load AWS credentials from .env
+#Load AWS credentials from .env
 load_dotenv('/home/abhishek/Potato_disease/api/.env')
 
 aws_access_key = os.getenv('AWS_ACCESS_KEY_ID')
 aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
 region = os.getenv('AWS_REGION')
 
-# 🪣 S3 bucket and model details
+#S3 bucket and model details
 bucket_name = 'potato-model'
 model_key = 'Model_0_2.h5'  # S3 object key (not a URL)
 
-# 📦 Create boto3 S3 client
+#Create boto3 S3 client
 s3 = boto3.client(
     's3',
     aws_access_key_id=aws_access_key,
@@ -29,7 +29,7 @@ s3 = boto3.client(
     region_name=region
 )
 
-# 🧠 Download model to a temporary file and load it
+#Download model to a temporary file and load it
 with tempfile.NamedTemporaryFile(suffix=".h5", delete=False) as temp_model_file:
     s3.download_fileobj(bucket_name, model_key, temp_model_file)
     temp_model_path = temp_model_file.name
@@ -45,13 +45,13 @@ CLASS_NAMES = [
     'Tomato_healthy'
 ]
 
-# 🚀 Create FastAPI app
+#Create FastAPI app
 app = FastAPI()
 
-# 🌐 Enable CORS for frontend/mobile app
+# Enable CORS for frontend/mobile app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Use specific domains in production
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,7 +61,7 @@ app.add_middleware(
 async def ping():
     return {"message": "Hello, I am alive"}
 
-# ✅ Fix: Resize image to 224x224 before prediction
+
 def read_file_as_image(data) -> np.ndarray:
     image = Image.open(BytesIO(data)).convert("RGB")
     image = image.resize((224, 224))  # match model input
@@ -80,6 +80,5 @@ async def predict(file: UploadFile = File(...)):
         "confidence": confidence
     }
 
-# 🔁 Run with: uvicorn main:app --host 0.0.0.0 --port 8000
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
