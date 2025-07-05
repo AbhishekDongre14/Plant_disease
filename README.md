@@ -61,6 +61,24 @@ plant-disease-app/
 
 ---
 
+## OUTPUT
+📱 Mobile Appp
+
+![Screenshot_2025-07-05-21-55-01-435_host exp exponent](https://github.com/user-attachments/assets/ac5ad4e0-7d57-441b-a15b-74793c6fd409)
+
+![Screenshot_2025-07-05-21-55-42-425_com google android gms](https://github.com/user-attachments/assets/b60cc66a-5a1a-4963-9562-1d0057224f52)
+
+![Screenshot_2025-07-05-21-55-49-206_host exp exponent(1)](https://github.com/user-attachments/assets/feff1664-79a5-4dca-95a8-2e91a67da49d)
+
+![Screenshot_2025-07-05-21-55-57-744_host exp exponent](https://github.com/user-attachments/assets/9ec63778-bcd7-45dd-b782-be8e7a527a66)
+
+
+
+💻 Web Frontend
+
+[Screencast from 2025-07-05 21-57-04.webm](https://github.com/user-attachments/assets/b254c39f-739a-4cea-a600-ef8c80227dce)
+
+
 ## ⚙️ Setup Instructions
 
 ### 1. 🌐 FastAPI Backend
@@ -114,17 +132,5 @@ Make sure the backend is running at the same IP/port defined in fetch().
 
     Modify main.py to fetch model using boto3.download_fileobj
 
-📱 Mobile Appp
-
-![Screenshot_2025-07-05-21-55-01-435_host exp exponent](https://github.com/user-attachments/assets/ac5ad4e0-7d57-441b-a15b-74793c6fd409)
-
-![Screenshot_2025-07-05-21-55-42-425_com google android gms](https://github.com/user-attachments/assets/b60cc66a-5a1a-4963-9562-1d0057224f52)
-
-![Screenshot_2025-07-05-21-55-49-206_host exp exponent(1)](https://github.com/user-attachments/assets/feff1664-79a5-4dca-95a8-2e91a67da49d)
-
-![Screenshot_2025-07-05-21-55-57-744_host exp exponent](https://github.com/user-attachments/assets/9ec63778-bcd7-45dd-b782-be8e7a527a66)
 
 
-💻 Web Frontend
-
-[Screencast from 2025-07-05 21-57-04.webm](https://github.com/user-attachments/assets/b254c39f-739a-4cea-a600-ef8c80227dce)
