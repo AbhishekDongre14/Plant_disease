@@ -62,7 +62,7 @@ plant-disease-app/
 ---
 
 ## OUTPUT
-📱 Mobile Appp
+📱 Mobile App
 
 ![Screenshot_2025-07-05-21-55-01-435_host exp exponent](https://github.com/user-attachments/assets/ac5ad4e0-7d57-441b-a15b-74793c6fd409)
 
