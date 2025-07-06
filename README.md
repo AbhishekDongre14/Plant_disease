@@ -1,5 +1,3 @@
-# Plant_disease
-
 # 🌿 Plant Disease Detection App
 
 A full-stack machine learning-powered application that allows users to predict plant diseases from images using a trained deep learning model hosted on AWS S3. This system works via:
